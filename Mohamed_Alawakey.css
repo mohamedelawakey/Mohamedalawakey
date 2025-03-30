@@ -98,15 +98,18 @@ section {
 }
 
 .circle {
-    flex: 0 0 auto;
-    width: 500px;
-    height: 500px; 
-    background-color: transparent; 
+    width: 350px;
+    height: 350px;
+    background-color: transparent;
     border-radius: 50%;
     display: flex;
-    justify-content: right;
-    align-items: right;
-    overflow: hidden; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: floatAnimation 2s ease-in-out infinite alternate;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    left: 90px;
 }
 
 .circle img {
@@ -119,6 +122,15 @@ section {
 .circle:hover {
     cursor: pointer;
     box-shadow: 0 0 20px 5px #43b7dd;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
 }
 
 /* About Section */
@@ -201,6 +213,20 @@ section {
     color: white;
 }
 
+.skill-card i {
+    font-size: 25px;
+    display: none;
+}
+
+.skill-card:hover span {
+    display: none;
+}
+
+.skill-card:hover i {
+    display: block;
+}
+
+
 /* CV Section */
 .cv-button {
     display: inline-block;
@@ -228,6 +254,11 @@ section {
 
 
 /* Experience Section */
+#experience pre h3 {
+    font-size: 17px; 
+    line-height: 1.6; 
+}
+
 .GitHub_username {
     color: blue; 
     cursor: pointer; 
@@ -253,12 +284,36 @@ a {
     color: #43b7dd; 
 }
 
+.ESE:hover {
+    color: #43b7dd; 
+}
+
+.ESE:active {
+    color: #43b7dd; 
+}
+
 .ALX:hover {
     color: #43b7dd; 
 }
 
 .ALX:active {
     color: #43b7dd; 
+}
+
+.GDG:hover {
+    color: #43b7dd; 
+}
+
+.GDG:active {
+    color: #43b7dd; 
+}
+
+.hover-Milky {
+    color: blue;
+  }
+  
+.hover-Milky:hover {
+    color: #43b7dd;
 }
 
 a.location:hover {
@@ -392,3 +447,4 @@ footer {
         font-size: 1.1rem;
     }
 }
+
