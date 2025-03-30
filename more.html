@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Mostafa Alawakey - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="more.css">
 </head>
 <body>
     <!-- Navigation Buttons -->
     <nav>
         <div class="nav-content">
-            <h1 class="logo"><a href="/index.html">Mohamed Mostafa Alsayed Alawakey</a></h1>
+            <h1 class="logo"><a href="index.html">Mohamed Mostafa Alawakey</a></h1>
             <ul class="nav-links">
                 <li><a href="#education" class="custom-button">Education</a></li>
                 <li><a href="#certificates" class="custom-button">Certificates</a></li>
@@ -23,49 +24,112 @@
     <section id="education">
         <div class="container">
             <div class="text-content">
+                <div>
+                    <h1 class="Education">Read More About My Journey</h1>
+                    <details>
+                        <summary class="summary">Click to read more</summary>
+                        <br>
+                        <p>
+                            I am a third-year Information Systems student at Tanta University, passionate about software development
+                            and data science. With a strong technical foundation, I have experience in Python, C++, C#, Java, SQL,
+                            PostgreSQL, Object-Oriented Programming (OOP), Data Structures, Git, GitHub, and UI/UX Development.
+                        </p>
+                        <br>
+                        <p>
+                            Before transitioning into the tech industry, I built valuable leadership and communication skills while
+                            working as a Sales Manager at PS and later as an Inside Sales Manager at Aliens Club. After three years
+                            in sales, I shifted my focus entirely to software development, aligning my career with my academic
+                            background.
+                        </p>
+                        <br>
+                        <p>
+                            To deepen my technical expertise, I joined the ITI Summer Training Program in UI Development, where I gained
+                            hands-on experience with HTML, CSS, JavaScript (ES6), Bootstrap, SASS, Photoshop, and Illustrator.
+                            As a team leader, I worked on a collaborative project, gaining valuable insights into web development
+                            and teamwork under the guidance of experienced mentors.
+                        </p>
+                        <br>
+                        <p>
+                            Seeking further growth, I was accepted into the ALX Data Science Program, where I have been enhancing my
+                            problem-solving, decision-making, research, and Agile development skills. Through this program, I also
+                            developed proficiency in Google Workspace tools (Docs, Drive, Sheets), Excel, teamwork, and presentation
+                            skills.
+                        </p>
+                        <br>
+                        <p>
+                            Alongside ALX, I secured a Data Science Internship at GDG on Campus Al-Azhar, where I am currently advancing
+                            my knowledge in statistics and databases. Additionally, I completed the Artificial Intelligence Ambassadors
+                            Program by Engineers for a Sustainable Egypt, gaining expertise in Prompt Engineering, AI Ethics, Orange
+                            Software, Data Visualization, and Microsoft Power BI.
+                        </p>
+                        <br>
+                        <p>
+                            I am committed to continuous learning and professional growth, striving to make a meaningful impact
+                            in software engineering and data science.
+                        </p>
+                    </details>
+                </div>
+                <br>
                 <h1 class="Education">Education</h1><br>
-                <h2 style="font-weight: normal; margin: 0; padding: 0;"><pre>    I am currently a semi-senior student at the Faculty of Computers and Information, Tanta University.</pre></h2><br>
+                <h2 style="font-weight: normal; margin: 0; padding: 0;"><pre>I'm a Semi Senior Student Information Systems Engineering student at Tanta University, passionate about data science,
+web development, and problem-solving. My studies focus on honing technical and analytical skills,
+and I actively engage in projects and workshops to bridge the gap between theory and practical application,
+preparing me for real-world challenges.
+                </pre></h2>
                 <h2>Skills from University</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">Python</div>
-                    <div class="skill-card">C++</div>
-                    <div class="skill-card">C#</div>
-                    <div class="skill-card">Java</div>
-                    <div class="skill-card">Javascript</div>
-                    <div class="skill-card">Html5</div>
-                    <div class="skill-card">Css3</div>
-                    <div class="skill-card">ES6</div>
-                    <div class="skill-card">Git</div>
-                    <div class="skill-card">GitHub</div>
-                    <div class="skill-card">Teamwork</div>
-                    <div class="skill-card">Leadership</div>
-                    <div class="skill-card">Work Ethic</div>
-                    <div class="skill-card">SQL</div>
-                    <div class="skill-card">OOP</div>
-                    <div class="skill-card">Data Structure</div>
+                    <div class="skill-card" data-icon="fa-python"><span>Python</span></div>
+                    <div class="skill-card"><span>C++</span><i class="icon">C++</i></div>
+                    <div class="skill-card"><span>C#</span><i class="icon">C♯</i></div> 
+                    <div class="skill-card" data-icon="fa-java"><span>Java</span></div>
+                    <div class="skill-card" data-icon="fa-js"><span>JavaScript</span></div>
+                    <div class="skill-card" data-icon="fa-html5"><span>HTML5</span></div>
+                    <div class="skill-card" data-icon="fa-css3-alt"><span>CSS3</span></div>
+                    <div class="skill-card" data-icon="fa-git-alt"><span>Git</span></div>
+                    <div class="skill-card" data-icon="fa-github"><span>GitHub</span></div>
+                    <div class="skill-card"><span>Teamwork</span><i class="icon">Teamwork</i></div> 
+                    <div class="skill-card"><span>Leadership</span><i class="icon">Leadership</i></div> 
+                    <div class="skill-card"><span>SQL</span><i class="icon">SQL</i></div> 
+                    <div class="skill-card"><span>OOP</span><i class="icon">OOP</i></div> 
+                    <div class="skill-card"><span>Data Structure</span><i class="icon">DSA</i></div> 
                 </div>
             </div>
         </div>
     </section>
+    <!-- Education skills script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".skill-card").forEach(card => {
+                const iconClass = card.getAttribute("data-icon");
+                if (iconClass) {
+                    const icon = document.createElement("i");
+                    icon.classList.add("fab", iconClass);
+                    card.appendChild(icon);
+                }
+            });
+        });
+    </script>
 
     <!-- Certificates Section -->
     <section id="certificates">
         <div class="container">
             <h2 class="Certificates">Certificates</h2><br> 
             <div class="certificates-grid">
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1712269137018/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">C++ 1 Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1734463343058/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">C++ 2 Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1721132492926/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">SQL - Cr </a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1719283588162/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">Software Testing Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1713901485166/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">Kali Linux Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1707227043272/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">soft skills Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1710675229037/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">Sales skills Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1721150705704/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">English Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/overlay/1730749944086/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">UI | UX Development Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1707227331465/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">communication skills Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1707775459476/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">Data Science & Analytics Cr</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1707227546754/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">problems solving</a></div>
-                <div><a class="certificates-card" href="https://www.linkedin.com/in/eng-mohamed-mostafa-el-awakey-a9015024b/details/certifications/1712268088590/single-media-viewer/?profileId=ACoAAD3HlwwBP-N_qXnU-uvJtcgoMQUatLFp7aA" target="_blank">SP and leadership skills Cr</a></div>
+                <div><a class="certificates-card" href="https://www.kaggle.com/learn/certification/mohamedalawakey/intro-to-programming" target="_blank">Intro to Programming</a></div>
+                <div><a class="certificates-card" href="https://www.kaggle.com/learn/certification/mohamedalawakey/python" target="_blank">python</a></div>
+                <div><a class="certificates-card" href="https://www.kaggle.com/learn/certification/mohamedalawakey/pandas" target="_blank">pandas</a></div>
+                <div><a class="certificates-card" href="https://www.kaggle.com/learn/certification/mohamedalawakey/data-visualization" target="_blank">Data Visualization</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/14bONWniovsWV01tuQUlj9B3mntY-LRvk/view" target="_blank">SQL</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/13O2Dhxua7IstEWe84zxEI2wnYsYt06SC/view" target="_blank">Data Science & Analytics</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1dUWhWOzcU1fd0auka361iPtB7JNgdh5P/view" target="_blank">problems solving</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1E0z36wQ6TZZDvrwlA3nuowR5G-bphTBn/view" target="_blank">C++ 1</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1Qw4zdxUP2ZvBFYZuOJjIXI8M8O3CXaYg/view" target="_blank">C++ 2</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1Uy4jkr_PbryIj9RWo-bzdh1YHgXBa6Gn/view" target="_blank">Software Testing</a></div>
+                <div><a class="certificates-card" href="https://www.udemy.com/certificate/UC-aa4ab921-a296-4453-a123-993431743573/" target="_blank">Kali Linux</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1iTme-uxyrsHd8RcrRO8rU1wExqCUgc3T/view" target="_blank">English</a></div>
+                <div><a class="certificates-card" href="https://teracourses.com/en/certificate/C-810931" target="_blank">communication skills</a></div>
+                <div><a class="certificates-card" href="https://drive.google.com/file/d/1pklvG6nKfZ9OpF9rujQqe8OR3gOXuCg0/view" target="_blank">SP and leadership skills</a></div>
+                <div><a class="certificates-card" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/6b6b34031fde33060b84674c1e2fbf593cd03d27" target="_blank">Understanding ChatGPT</a></div>
             </div>
         </div>
     </section>
@@ -75,20 +139,25 @@
         <div class="container">
             <h2 class="Projects">Projects</h2><br>
             <div class="projects-grid">
-                <div><a class="projects-card" href="https://github.com/mohamedelawakey/School__System" target="_blank">School System Pr</a></div>
-                <div><a class="projects-card" href="https://github.com/mohamedelawakey/To_Do_List" target="_blank">To Do List Pr</a></div>
-                <div><a class="projects-card" href="https://github.com/mohamedelawakey/audio_downloader" target="_blank">Audio Downloader Pr</a></div>
-                <div><a class="projects-card" href="https://github.com/mohamedelawakey/speed_car_store" target="_blank">Speed Car Store Pr</a></div>
-                <div><a class="projects-card" href="https://github.com/mohamedelawakey/currency_reveal" target="_blank">Currency Reveal Pr</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/School__System" target="_blank">School System</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/X_O_Game" target="_blank">X & O Game</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/cs50_learning" target="_blank">cs50 learning</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/To_Do_List" target="_blank">To Do List</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/audio_downloader" target="_blank">Audio Downloader</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/speed_car_store" target="_blank">Speed Car Store</a></div>
+                <div><a class="projects-card" href="https://github.com/mohamedelawakey/currency_reveal" target="_blank">Currency Reveal</a></div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mohamed Mostafa Alawakey. All rights reserved.</p>
+        <p>&copy; 2025 Mohamed Mostafa Alawakey. All rights reserved.</p>
     </footer>
 
+    <!-- JS Files -->
     <script src="main.js"></script>
+    <script src="more.js"></script>
 </body>
 </html>
